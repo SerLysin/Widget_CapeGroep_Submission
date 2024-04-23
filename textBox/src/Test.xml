@@ -42,27 +42,6 @@
                 <caption>On change user input</caption>
                 <description/>
             </property> 
-            <!-- <property key="sampleText" type="string" required="false">
-                <caption>Default value</caption>
-                <description>Sample text input</description>
-            </property>
-
-            <property key="yourName" type="attribute">
-                <caption>Your Name</caption>
-                <description>Sould be filled by yourName</description>
-                <attributeTypes>
-                    <attributeType name="String"/>
-                </attributeTypes>
-            </property>
-
-            
-                
-                
-            <property key="onYourNameChanged" type="action">
-                <caption>On change your name</caption>
-                <description/>
-            </property> -->
-
         </propertyGroup>
     </properties>
 </widget>
