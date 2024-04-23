@@ -1,0 +1,178 @@
+
+.widget-chatbottesttwo-clickable {
+    cursor: pointer;
+}
+
+.widget-chatbottesttwo {
+    display: inline-block;
+}
+
+.widget-chatbottesttwo.badge:empty {
+    display: initial;
+    /* Fix padding to stay round */
+    padding: 3px 10px;
+}
+
+.widget-chatbottesttwo.label:empty {
+    display: initial;
+    /* Fix padding to stay square */
+    padding: .2em .8em .3em;
+}
+
+.widget-chatbottesttwo.badge {
+    min-width: 18px;
+    min-height: 18px;
+}
+
+.chat-toggle {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    width: 60px; /* Size of the button */
+    height: 60px; /* Size of the button */
+    border-radius: 50%; /* Make it round */
+    background-color: #0078d4; /* Example color; adjust as needed */
+    color: white; /* Icon color */
+    font-size: 30px; /* Adjust as needed */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it is above other content */
+}
+.chatbot-widget {
+    display: none; /* Hide by default */
+}
+
+/* chatbot-widget styling */
+.chatbot-widget.open {
+    display: flex; 
+    position: fixed;
+    bottom: 5vh; /* 5% of the viewport height from the bottom */
+    right: 5vw; /* 5% of the viewport width from the right */
+    width: 10vw; /* 10% of the viewport width */
+    max-width: 350px; /* Maximum width to prevent it from becoming too large on wide screens */
+    height: 50vh; /* 50% of the viewport height */
+    max-height: 600px; /* Maximum height to prevent it from becoming too large on tall screens */
+    min-height: 300px; /* Minimum height to ensure visibility of content */
+    min-width: 300px; /* Minimum width to ensure visibility of content */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    font-family: 'Roboto', Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000; /* Ensures the chat widget stays on top of other content */
+}
+
+/* Header styling */
+.chat-header {
+    background-color: #0078d4;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative; /* Set the header to relative to position children absolutely within it */
+}
+
+.collapse-button {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Position to the top-right corner of the chat-header */
+    background-color: #0078d4; /* Match the header background color */
+    border: none;
+    border-radius: 50%;
+    padding: 0 6px; /* A little padding to make it more clickable */
+    color: white;
+    cursor: pointer;
+    font-size: 20px; /* Size of the button */
+    line-height: 20px; /* Align the symbol vertically */
+    height: 20px; /* Define a fixed height */
+    width: 20px; /* Define a fixed width */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none; /* Removes the outline to keep the design clean */
+}
+
+.collapse-button::before {
+    content: "\2212"; /* Unicode for the minus sign */
+    display: block;
+}
+
+.chat-body {
+    flex-grow: 1; /* Allows the chat body to fill the space */
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #fff;
+    scroll-behavior: smooth;
+}
+
+
+
+/* Input field styling */
+.user-input {
+    border: none;
+    padding: 10px;
+    width: calc(100% - 20px); /* Calculate width based on the parent width */
+    box-sizing: border-box;
+    border-top: 2px solid #0078d4;
+    outline: none;
+    font-size: 1em;
+}
+
+
+
+/* Message bubble styling */
+.chat-message {
+    max-width: 70%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    color: #ffffff;
+    word-wrap:break-word;
+    font-size: 1em; /* Increased font size */
+    line-height: 1.4;
+}
+
+
+/* User message styling */
+.user-message {
+    background-color: #4e8cff;
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right; /* Aligns text to the right */
+    word-wrap:break-word;
+}
+
+/* System message styling */
+.system-message {
+    background-color: #dddddd;
+    color: #333333;
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left; /* Aligns text to the left */
+    word-wrap:break-word;
+}
+
+
+/* Bot message styling */
+.bot-message {
+    background-color: #dddddd;
+    color: #333333;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+/* Clear floats */
+.clear-float {
+    clear: both;
+}
